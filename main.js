@@ -11,20 +11,25 @@ if (localStorage.getItem("bookmarkContainer") !== null) {
 
 function addBookmark() {
     const bookmarkName = bookmarkNameInput.value.trim();
-    const bookmarkLink = bookmarkLinkInput.value.trim();
+    let bookmarkLink = bookmarkLinkInput.value.trim();
 
-    if (bookmarkName === "" || bookmarkLink === "") {
-        alert("Both fields are required!");
+    if (bookmarkName === "") {
+        alert("Site name cannot be empty!");
         return;
     }
 
-    const pattern = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
+    const pattern = /^(http:\/\/|https:\/\/)/;
     if (!pattern.test(bookmarkLink)) {
-        alert("Please enter a valid URL starting with http:// or https://");
+        bookmarkLink = "http://" + bookmarkLink;
+    }
+
+    const validURLPattern = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
+    if (!validURLPattern.test(bookmarkLink)) {
+        alert("Please enter a valid URL.");
         return;
     }
 
-    const capitalizedBookmarkName = bookmarkName.charAt(0).toUpperCase() + bookmarkName.slice(1); //to make the first letter a capital
+    const capitalizedBookmarkName = bookmarkName.charAt(0).toUpperCase() + bookmarkName.slice(1);
 
     const bookmark = {
         name: capitalizedBookmarkName,
