@@ -10,8 +10,13 @@ JavaScript: For managing the logic, including adding bookmarks to the list, savi
 Font Awesome: For adding icons to buttons (bookmark, link, and delete).
 # Key Features:
 Users can enter a website name and URL.
+
 The app validates that the URL starts with http:// or https://, and automatically adds http:// if missing.
+
 The website name is capitalized (first letter only) automatically before being displayed.
+
 Bookmarks are stored in localStorage and persist even after the browser is closed.
+
 Users can delete bookmarks from the list.
+
 Bootstrap is used for responsive design, ensuring the layout adapts to different screen sizes.
