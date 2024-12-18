@@ -1,0 +1,41 @@
+h1 {
+    font-family: "Pacifico";
+    font-size: 50px;
+    font-weight: 500;
+    color: #352e28;
+}
+
+
+body {
+    background-color: #F7ECDE;
+}
+
+.bookmarkrrr {
+    font-family: "Righteous";
+    font-size: 25px;
+    font-weight: 500;
+
+
+  background: -webkit-linear-gradient(189deg, rgba(178,172,73,1) 32%, rgba(64,165,91,1) 67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.site-name {
+    font-family: "PT Sans Caption";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.site-link {
+    font-family: "PT Sans Caption";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.botoon {
+    font-family: "PT Sans Caption";
+}
